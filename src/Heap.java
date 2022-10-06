@@ -38,7 +38,7 @@ public class Heap {
     }
     public Integer removeLinear(Integer value){
         Node current = list.head;
-        while(current.next != null && current.next.data != value){
+        while(current.next != null && current.data != value){
             current = current.next;
         }
         Node t = current.next.next;
