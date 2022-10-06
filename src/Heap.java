@@ -36,4 +36,14 @@ public class Heap {
         nodeBeforeTarget.next = t;
         return value;
     }
+    public Integer removeLinear(Integer value){
+        Node current = list.head;
+        while(current.next != null && current.next.data != value){
+            current = current.next;
+        }
+        Node t = current.next.next;
+        Integer v = current.next.data;
+        current.next = t;
+        return v;
+    }
 }
